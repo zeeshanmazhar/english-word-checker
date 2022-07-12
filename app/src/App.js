@@ -21,7 +21,7 @@ function App() {
       const query = querystring.stringify({ sentence: value })
 
 
-      const response = await axios.get(`http://localhost:3001/sentence/check?${query}`);
+      const response = await axios.get(`https://zee-word-checker.herokuapp.com/sentence/check?${query}`);
       console.log(response.data);
 
       setFormOutput({ words: response.data, shouldShow: true });
